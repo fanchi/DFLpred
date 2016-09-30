@@ -1,5 +1,6 @@
 # DFLpred
 High-throughput prediction of disordered flexible linker regions in proteins  
+  
 DFLpred is designed for the prediction of disordered flexible linker (DFL). The method generates numeric score for each residue in the input protein sequence that quantifies putative propensity to form a DFL. Larger value of propensity denotes higher likelihood to form DFL. It also provides putative binary annotations (a given residue is predicted either as a DFL or not a DFL) based on false positive rate = 0.05 using threshold on the propensity score = 0.18). Residues with propensity > 0.18 are assumed to form DFLs and otherwise they are assumed not to form DFLs.  
 
 #System requirement
