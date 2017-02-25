@@ -1,4 +1,4 @@
-package dflpred;
+package ca.ualberta.ece.biomine.predictors.dflpred;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,7 +12,7 @@ public class Helper {
 		try {
 			buffer = new BufferedReader(new FileReader(strFileName));
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println(strFileName + " not found");
 		}
 		int count = 0;
 		String currentLine = null;
@@ -44,6 +44,6 @@ public class Helper {
 			}
 		}
 		file.delete();
-	}//static public void recursiveDelete
+	}// static public void recursiveDelete
 
 }// class Helper
