@@ -3,7 +3,7 @@ DFLpred is designed for the prediction of disordered flexible linker (DFL). The 
 
 ## System requirement
 Java Runtime Environment 1.5 or later  
-Any ANSI C compiler e.g. GUN C compiler to compile "myiupred.c" (if "myiupred" is not runnable on your  computer).
+Any ANSI C compiler e.g. GUN C compiler to compile "myiupred.c" (if "myiupred" is not runnable on your  computer)
 
 ## Usage (command line)
 java -jar DFLpred.jar [input_fasta_file] [output_file]  
@@ -14,14 +14,14 @@ java -jar DFLpred.jar examples.fasta results.txt
 
 ## Format of results
 Line 1: >protein ID  
-Line 2: protein sequence using 1-letter amino acid encoding. Lower/upper case indicates a residue is/is not predicted as a flexible disordered linker (DFL) by the score threshold 0.18.  
-Line 3: comma-separated propensity score of each residue to be a DFL.
+Line 2: protein sequence using 1-letter amino acid encoding. Lower/upper case indicates a residue is/is not predicted as a flexible disordered linker (DFL) by the score threshold 0.18  
+Line 3: comma-separated propensity score of each residue to be a DFL
 
 ## DFLpred webserver
 http://biomine-ws.ece.ualberta.ca/DFLpred
 
 ## Citation
-Meng, F. and Kurgan, L. DFLpred: High-throughput prediction of disordered flexible linker regions in protein sequences. Bioinformatics 2016;32(12):i341-i350.
+Meng, F. and Kurgan, L. DFLpred: High-throughput prediction of disordered flexible linker regions in protein sequences. Bioinformatics 2016;32(12):i341-i350
 
 ## Acknowledgments
 We acknowledge with thanks the following software used as a part of DFLpred:  
