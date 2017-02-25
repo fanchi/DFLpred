@@ -1,0 +1,8 @@
+title: DFLpred
+description: High-throughput prediction of disordered flexible linker regions in protein sequences
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
