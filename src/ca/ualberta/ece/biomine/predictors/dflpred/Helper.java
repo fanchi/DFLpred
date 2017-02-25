@@ -18,7 +18,7 @@ public class Helper {
 		String currentLine = null;
 		try {
 			while ((currentLine = buffer.readLine()) != null && count < line) {
-				count++;
+				count ++;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

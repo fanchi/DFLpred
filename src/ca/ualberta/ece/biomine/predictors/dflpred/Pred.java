@@ -38,12 +38,12 @@ public class Pred {
 					singleFastaFileOsw.write(currentLine + "\n");
 					String seq;
 					int currentLineCount = lineCount;
-					while ((seq = Helper.readLine(inputFileName, ++currentLineCount)) != null && !seq.substring(0, 1).equals(">")) {
+					while ((seq = Helper.readLine(inputFileName, ++ currentLineCount)) != null && !seq.substring(0, 1).equals(">")) {
 						singleFastaFileOsw.write(seq);
 					}// while seq lines for current identifier
 					singleFastaFileOsw.close();
 				}// if identifier line
-				lineCount++;
+				lineCount ++;
 			}// while currentLine in input file
 			buffer.close();
 		} catch (IOException e) {
@@ -112,10 +112,10 @@ public class Pred {
 				int i = 0;
 				while ((currentLine = buffer.readLine()) != null) {
 					String[] splited = currentLine.split(" ");
-					for (int k = 1; k < splited.length; k++) {
+					for (int k = 1; k < splited.length; k ++) {
 						aainds[i][k - 1] = Double.valueOf(splited[k]);
 					}
-					i++;
+					i ++;
 				}// while current line in aaind file
 			} catch (IOException e) {
 				System.out.println("read AA index error");
@@ -134,12 +134,12 @@ public class Pred {
 			curIUPG = curIUPG.replaceAll(",", "");
 			ArrayList<Double> iUPredLSplit = new ArrayList<Double>();
 			String[] splited = curIUPL.split(",");
-			for (int i = 0; i < splited.length; i++) {
+			for (int i = 0; i < splited.length; i ++) {
 				iUPredLSplit.add(Double.valueOf(splited[i]));
 			}
 			String[] scores = new String[curSeq.length()];
 			// get features per residue
-			for (int resNum = 0; resNum < curSeq.length(); resNum++) {
+			for (int resNum = 0; resNum < curSeq.length(); resNum ++) {
 				FeaPerResidue feaCurRes = new FeaPerResidue(curSeq, curIUPG, iUPredLSplit, aainds, resNum);
 				double z = feaCurRes.numIupG0 * coeffs[0] + feaCurRes.stdIupLVal * coeffs[1] + feaCurRes.avgAAIndAURR980118 * coeffs[2]
 						+ feaCurRes.avgAAIndPALJ810114 * coeffs[3] + coeffs[4];
@@ -154,7 +154,7 @@ public class Pred {
 			// str_binary = String.valueOf(binary);
 			try {
 				outputFileOsw.write(strCurSeq + "\n");
-				for (int resNum = 0; resNum < curSeq.length() - 1; resNum++)
+				for (int resNum = 0; resNum < curSeq.length() - 1; resNum ++)
 					outputFileOsw.write(scores[resNum] + ",");
 				outputFileOsw.write(scores[curSeq.length() - 1]);
 				outputFileOsw.write("\n");
